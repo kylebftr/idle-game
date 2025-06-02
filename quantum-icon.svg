@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <circle cx="16" cy="16" r="15" fill="url(#gradient)" />
+  
+  <!-- Quantum particle paths -->
+  <path d="M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12 12-5.373 12-12S22.627 4 16 4z" 
+        stroke="#00f7ff" 
+        stroke-width="1.5" 
+        stroke-dasharray="2 2" 
+        fill="none"/>
+  
+  <!-- Central quantum core -->
+  <circle cx="16" cy="16" r="4" fill="#00f7ff">
+    <animate attributeName="r" 
+             values="4;5;4" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+    <animate attributeName="opacity" 
+             values="1;0.7;1" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Orbiting particles -->
+  <circle cx="16" cy="8" r="1.5" fill="#00f7ff">
+    <animateTransform attributeName="transform" 
+                      type="rotate" 
+                      from="0 16 16" 
+                      to="360 16 16" 
+                      dur="3s" 
+                      repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="16" cy="24" r="1.5" fill="#00f7ff">
+    <animateTransform attributeName="transform" 
+                      type="rotate" 
+                      from="0 16 16" 
+                      to="-360 16 16" 
+                      dur="3s" 
+                      repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <radialGradient id="gradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16 16) rotate(90) scale(15)">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#141b2d"/>
+    </radialGradient>
+  </defs>
+</svg> 
